@@ -10,21 +10,11 @@
             android:id="@+id/product"
             android:title="Our Product" />
         <item
-            android:id="@+id/store_location"
-            android:title="Our Outlets" />
+            android:id="@+id/loyalty"
+            android:title="Loyalty program" />
         <item
-            android:id="@+id/scan"
-            android:title="Scan Recipe" />
-        <item
-            android:id="@+id/stamp"
-            android:title="My Stamp" />
-        <item
-            android:id="@+id/point"
-            android:title="My Points" />
-
-        <item
-            android:id="@+id/about"
-            android:title="About" />
+            android:id="@+id/profile"
+            android:title="My Profile" />
     </group>
 
 

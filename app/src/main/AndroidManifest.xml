@@ -33,6 +33,9 @@
         <activity
             android:name=".ScanActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RewardActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SwipeActivity" android:theme="@style/Base.Theme.AppCompat.Dialog"></activity>
     </application>
 

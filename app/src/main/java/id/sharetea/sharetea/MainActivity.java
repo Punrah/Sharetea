@@ -61,46 +61,9 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         View header=navigationView.getHeaderView(0);
-        final TextView name = (TextView)header.findViewById(R.id.name);
-        final TextView email = (TextView)header.findViewById(R.id.email);
-        TextView logout = (TextView) header.findViewById(R.id.logout);
-        logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                logout();
-            }
-        });
 
 
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        if (user != null) {
-            mDatabase = FirebaseDatabase.getInstance().getReference()
-                    .child("users").child(user.getUid());
-            ValueEventListener postListener = new ValueEventListener() {
 
-
-                @Override
-                public void onDataChange(DataSnapshot dataSnapshot) {
-                    // Get Post object and use the values to update the UI
-                    User user = dataSnapshot.getValue(User.class);
-                    // [START_EXCLUDE]
-                    name.setText(user.name);
-                    email.setText(user.email);
-                    // [END_EXCLUDE]
-                }
-
-                @Override
-                public void onCancelled(DatabaseError databaseError) {
-                    // Getting Post failed, log a message
-                    //Log.w(TAG, "loadPost:onCancelled", databaseError.toException());
-                    // [START_EXCLUDE]
-                    Toast.makeText(MainActivity.this, "Failed to load post.",
-                            Toast.LENGTH_SHORT).show();
-                    // [END_EXCLUDE]
-                }
-            };
-            mDatabase.addListenerForSingleValueEvent(postListener);
-        }
 
 
         initiateFragment();
@@ -121,7 +84,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void replaceToProductFragment()
-    {   ProductFragment newFragment = new ProductFragment();
+    {   OurPruductFragment newFragment = new OurPruductFragment();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.fragment_container, newFragment);
         transaction.addToBackStack(null);
@@ -174,6 +137,22 @@ public class MainActivity extends AppCompatActivity
         transaction.commit();
     }
 
+    private void replaceToLoyaltyFragment()
+    {   LoyaltyFragment newFragment = new LoyaltyFragment();
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.fragment_container, newFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
+    private void replaceToProfileFragment()
+    {   ProfileFragment newFragment = new ProfileFragment();
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.fragment_container, newFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -198,22 +177,13 @@ public class MainActivity extends AppCompatActivity
             replaceToProductFragment();
 
         }
-        else if (id == R.id.scan) {
-            replaceToScanFragment();
+        else if (id == R.id.loyalty) {
+            replaceToLoyaltyFragment();
 
         }
-        else if (id == R.id.stamp) {
-            replaceToStampFragment();
+        else if (id == R.id.profile) {
+            replaceToProfileFragment();
 
-        }else if (id == R.id.point) {
-            replaceToPointFragment();
-
-        }
-        else if (id == R.id.store_location) {
-            replaceToStoreFragment();
-
-        } else if (id == R.id.about) {
-            replaceToAboutFragment();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

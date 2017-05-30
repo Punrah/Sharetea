@@ -4,30 +4,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="id.sharetea.sharetea.HomeFragment">
+    <include
 
-    <RelativeLayout
-        android:layout_marginTop="40dp"
-        android:id="@+id/spinner"
+        android:id="@+id/search"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/search_layout"/>
+    <Spinner
+        android:layout_margin="4dp"
+        android:layout_below="@id/search"
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-        <TextView
-            android:layout_margin="10dp"
-            android:text="MY POINTS"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
 
-        </TextView>
-        <TextView
-            android:layout_alignParentRight="true"
-            android:layout_margin="10dp"
-
-            android:text="1000 pts"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-        </TextView>
-    </RelativeLayout>
-
+    </Spinner>
 
     <RelativeLayout
         android:layout_below="@id/spinner"
@@ -49,6 +39,7 @@ android:background="@color/white"
             android:layout_height="wrap_content"
             android:scrollbars="vertical" />
     </RelativeLayout>
+
     <include
 
         android:id="@+id/loadItemsLayout_recyclerView"
