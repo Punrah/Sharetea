@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/box_shadow">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:scaleType="centerCrop"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/img_item"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/main_logo"
+            android:background="@color/white"/>
+
+        <RelativeLayout
+            android:paddingLeft="5dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/item_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
+                    android:text="Item Name"
+                    android:layout_marginBottom="0dp"/>
+            <TextView
+                android:layout_below="@id/item_name"
+                android:id="@+id/points"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:text="500 pts"
+                android:layout_marginBottom="0dp"/>
+
+        </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+

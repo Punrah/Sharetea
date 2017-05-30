@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="id.sharetea.sharetea.StampFragment">
+    <TextView
+        android:layout_margin="10dp"
+        android:layout_below="@id/search"
+        android:id="@+id/spinner"
+        android:text="MY STAPMS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="20">
+    <ImageView
+        android:scaleType="centerCrop"
+        android:src="@drawable/open_app"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="6/10"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="32dp"
+        android:layout_weight="2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
+
+    <TextView
+        android:id="@+id/redeem"
+        android:gravity="center"
+        android:background="@color/colorAccent"
+        android:layout_gravity="center_horizontal"
+        android:text="REDEEM"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+</LinearLayout>

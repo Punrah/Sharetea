@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "146704959409",
+    "firebase_url": "https://sharetea-39ca6.firebaseio.com",
+    "project_id": "sharetea-39ca6",
+    "storage_bucket": "sharetea-39ca6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:146704959409:android:81b6387f54dc9b61",
+        "android_client_info": {
+          "package_name": "id.sharetea.sharetea"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "146704959409-8661al8mld926qqa5spfrs1hgpot3pd9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.sharetea.sharetea",
+            "certificate_hash": "a8a67753a14f0ef3e4b1e562ff2c34d0a0e01f19"
+          }
+        },
+        {
+          "client_id": "146704959409-pdo10o714hf0d6lod1ftkcp9d2sg1pk1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADspQHsSgf0tcVwoxZEhFDc2pRBa-jg3o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "146704959409-pdo10o714hf0d6lod1ftkcp9d2sg1pk1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
